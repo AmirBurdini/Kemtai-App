@@ -5,16 +5,14 @@ import {Button} from '@material-ui/core'
 
 const Home = () => {
 
-    let move = () => {
-
-        return <Redirect to = "/exercise" ></Redirect>
-    }
+    const [move, setMove] = useState(<a></a>);
 
     return (
         <div>
-           <Button onClick = {move}>
+           <Button onClick = {() => {setMove(<Redirect to = "/exercise"/>)}}>
                Kemtai
            </Button>
+           {move}
         </div>
 )}
 
