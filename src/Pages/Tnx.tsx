@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import {Typography} from '@material-ui/core'
+import {Typography} from '@material-ui/core';
 
 const Tnx = () => {
 

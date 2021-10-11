@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import {Typography} from '@material-ui/core'
+import Stack from '@mui/material/Stack';
+import Clock from '../Comps/Clock'
 
 const Exercise = () => {
 
     return (
-        <div className = "Tnx">
-            <Typography>E</Typography>
+        <div className = "Exercise">
+             <Stack direction="row" spacing={30}>
+                <Clock seconds = {60}/>
+                <Clock seconds = {5}/>
+            </Stack>
         </div>
 )}
 
