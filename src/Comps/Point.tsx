@@ -7,17 +7,17 @@ interface Props {
     
     height : number,
     width : number,
+    id : string
 }
 
 const Point : React.FC<Props> = (props) : JSX.Element => {
 
     let circleStyle = {
-        padding:0,
         display:"inline-block",
         backgroundColor: "#000000",
         borderRadius: "50%",
-        width : 10,
-        height : 10,
+        width : 3,
+        height : 3,
         marginLeft : props.width,
         marginTop : props.height
     };

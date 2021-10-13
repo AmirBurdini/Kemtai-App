@@ -9,6 +9,7 @@ interface Props {
     seconds : number;
     transition : boolean; // is this the main clock (the one who transtions to /tnx)
     randomPoints : Function // render points in random locations
+    id : string
 }
 
 const Clock : React.FC<Props> = (props) : JSX.Element => {

@@ -1,32 +1,28 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Stack from '@mui/material/Stack';
 import Clock from '../Comps/Clock'
-import Point from '../Comps/Point';
+import { Stage, Layer, Arc } from 'react-konva';
+import { Typography } from '@mui/material';
 
 const Exercise = () => {
 
-    const [points, setPoints] = useState<Array<JSX.Element>>([])
+    const [position, setPosition] = useState({x : -50, y : -50})
+    const [angle, setAngle] = useState(Math.random() * (150) + 30)
 
     let randomLocation = () => {
 
-        let height : number;
-        let width : number;
-        let pointsArr : JSX.Element[] = [] 
-        for (let i :number = 0; i < 3; i++) {
+        let y : number = Math.random() * (-100) ;
+        let x : number = Math.random() * (-100) ;
+        let angle : number = Math.random() * (90) ;
 
-            height = Math.random() * (100) ;
-            width  = Math.random() * (100) ;
-
-            pointsArr.push(<Point key = {i} height={height} width={width} />)
-        }
-
-        setPoints(pointsArr);
+        setPosition({x, y})
+        setAngle(angle)
     }
 
-    let exerciseTimer = <Clock seconds = {5} transition = {false} 
+    let exerciseTimer = <Clock id = "exerciseTimer" seconds = {5} transition = {false} 
         randomPoints = {randomLocation}/>
-    let totalTimer = <Clock seconds = {60} transition = {true} 
+    let totalTimer = <Clock id = "totalTimer" seconds = {60} transition = {true} 
         randomPoints = {randomLocation}/>
 
     return (
@@ -35,7 +31,27 @@ const Exercise = () => {
                 {exerciseTimer}
                 {totalTimer}
             </Stack>
-            {points}
+            <br/>
+            <Stage width={window.innerWidth} height={window.innerHeight}>
+                <Layer>
+                    <Arc
+                        innerRadius = {1}
+                        outerRadius = {300}
+                        stroke = '#000000'
+                        angle = {angle}
+                        offsetX = {position.x}
+                        offsetY = {position.y}
+                    />
+                    <Arc
+                        innerRadius = {1}
+                        outerRadius = {100}
+                        fill = '#b80000'
+                        angle = {angle}
+                        offsetX = {position.x}
+                        offsetY = {position.y}
+                    />
+                </Layer>
+            </Stage>
         </div>
 )}
 
