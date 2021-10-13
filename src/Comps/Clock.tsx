@@ -46,9 +46,9 @@ const Clock : React.FC<Props> = (props) : JSX.Element => {
     timeFunction()
 
     return (
-        <div className = "Clock">
+        <div className = "clock">
             <Stack direction="row" spacing={5}>
-                <Typography>{time}</Typography>
+                <Typography className = "clock-text">{time}</Typography>
                 <div style={{ width: 20, height: 20 }}>
                     <CircularProgressbar
                         value={time}
@@ -62,12 +62,13 @@ const Clock : React.FC<Props> = (props) : JSX.Element => {
                             // Customize the path, i.e. the "completed progress"
                             path: {
                               // Path color
-                              stroke: `rgba(0, 0, 0, ${time / props.seconds})`,
+                              stroke: `#000000`,
                             },
                             // Customize the circle behind the path, i.e. the "total progress"
                             trail: {
                               // Trail color
                               stroke: '#FFFFFF',
+                              
                               // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
                             }}}
                     />
