@@ -47,17 +47,31 @@ const Clock : React.FC<Props> = (props) : JSX.Element => {
 
     return (
         <div className = "Clock">
-            <Stack direction="row" spacing={10}>
+            <Stack direction="row" spacing={5}>
                 <Typography>{time}</Typography>
-                <CircularProgressbar 
-                    styles={buildStyles({
-                        backgroundColor: '#1118c7',
-                    })}
-                    minValue = {0}
-                    maxValue = {props.seconds}
-                    value={(time / props.seconds)}
-                    strokeWidth={50}
-                />
+                <div style={{ width: 20, height: 20 }}>
+                    <CircularProgressbar
+                        value={time}
+                        minValue = {0}
+                        maxValue = {props.seconds}
+                        strokeWidth={50}
+                        styles={{
+                            // Customize the root svg element
+                            root: {
+                            },
+                            // Customize the path, i.e. the "completed progress"
+                            path: {
+                              // Path color
+                              stroke: `rgba(0, 0, 0, ${time / props.seconds})`,
+                            },
+                            // Customize the circle behind the path, i.e. the "total progress"
+                            trail: {
+                              // Trail color
+                              stroke: '#FFFFFF',
+                              // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                            }}}
+                    />
+                </div>
             </Stack>
             {move}
         </div>

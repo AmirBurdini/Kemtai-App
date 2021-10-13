@@ -2,19 +2,19 @@ import React, { useRef, useState } from 'react';
 
 import Stack from '@mui/material/Stack';
 import Clock from '../Comps/Clock'
-import { Stage, Layer, Arc } from 'react-konva';
+import { Stage, Layer, Arc, Label, Text } from 'react-konva';
 import { Typography } from '@mui/material';
 
 const Exercise = () => {
 
-    const [position, setPosition] = useState({x : -50, y : -50})
+    const [position, setPosition] = useState({x : -350, y : -150})
     const [angle, setAngle] = useState(Math.random() * (150) + 30)
 
     let randomLocation = () => {
 
-        let y : number = Math.random() * (-100) ;
-        let x : number = Math.random() * (-100) ;
-        let angle : number = Math.random() * (90) ;
+        let y : number = Math.random() * (-100) - 100 ;
+        let x : number = Math.random() * (-100) - 100 ;
+        let angle : number = Math.random() * (150) + 30;
 
         setPosition({x, y})
         setAngle(angle)
@@ -36,7 +36,7 @@ const Exercise = () => {
                 <Layer>
                     <Arc
                         innerRadius = {1}
-                        outerRadius = {300}
+                        outerRadius = {200}
                         stroke = '#000000'
                         angle = {angle}
                         offsetX = {position.x}
@@ -49,6 +49,11 @@ const Exercise = () => {
                         angle = {angle}
                         offsetX = {position.x}
                         offsetY = {position.y}
+                    />
+                    <Text
+                        offsetX = {position.x}
+                        offsetY = {position.y + 15}
+                        text = {angle.toFixed(2) + ""}
                     />
                 </Layer>
             </Stage>
