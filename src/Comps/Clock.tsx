@@ -45,6 +45,8 @@ const Clock : React.FC<Props> = (props) : JSX.Element => {
 
     timeFunction()
 
+    // clockify
+
     return (
         <div className = "Clock">
             <Stack direction="row" spacing={5}>
