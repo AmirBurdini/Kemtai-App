@@ -12,8 +12,8 @@ const Exercise = () => {
 
     let randomLocation = () => {
 
-        let y : number = Math.random() * (-100) - 400 ;
-        let x : number = Math.random() * (-100) - 20 ;
+        let y : number = Math.random() * (-400) - 20 ;
+        let x : number = Math.random() * (-1000) - 100 ;
         let angle : number = Math.random() * (150) + 30;
 
         setPosition({x, y})
