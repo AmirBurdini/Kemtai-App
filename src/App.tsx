@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
-
 import Exercise from './Pages/Exercise';
 import Home from './Pages/Home';
 import Tnx from './Pages/Tnx';
+
+const {BrowserRouter :Router, Switch, Route} = require('react-router-dom')
 
 function App() {
 
