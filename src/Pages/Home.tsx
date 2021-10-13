@@ -15,8 +15,6 @@ const Home = () => {
            <Button onClick = {() => {setMove(<Redirect to = "/exercise"/>)}}>
                Kemtai
            </Button>
-           <Clock id = "1" seconds = {60} transition = {false} 
-                randomPoints = {randomLocation}/>
            {move}
         </div>
 )}
