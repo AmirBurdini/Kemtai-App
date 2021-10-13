@@ -1,19 +1,25 @@
-import React, { useRef, useState } from 'react';
+import React, {useState } from 'react';
 
 import Stack from '@mui/material/Stack';
 import Clock from '../Comps/Clock'
-import { Stage, Layer, Arc, Label, Text } from 'react-konva';
-import { Box } from '@mui/system';
+import { Stage, Layer, Arc, Text } from 'react-konva';
 
 const Exercise = () => {
 
-    const [position, setPosition] = useState({x : -400, y : -20})
+    const windowWidth : number = window.innerWidth
+    const windowHeight : number = window.innerHeight
+
+    const [position, setPosition] = useState({
+        x : Math.random() * windowWidth * (-0.6)
+        , y : Math.random() * windowHeight * (-0.6)
+    })
     const [angle, setAngle] = useState(Math.random() * (150) + 30)
+
 
     let randomLocation = () => {
 
-        let y : number = Math.random() * (-400) - 20 ;
-        let x : number = Math.random() * (-1000) - 100 ;
+        let y : number = Math.random() * windowHeight * (-0.6);
+        let x : number = Math.random() * windowWidth * (-0.6) ;
         let angle : number = Math.random() * (150) + 30;
 
         setPosition({x, y})
@@ -27,7 +33,7 @@ const Exercise = () => {
 
     return (
         <div className = "Exercise">
-             <Stack direction="row" spacing={window.innerWidth * 0.08}>
+             <Stack direction="row" spacing={windowWidth * 0.1}>
                 {exerciseTimer}
                 {totalTimer}
             </Stack>
@@ -35,7 +41,7 @@ const Exercise = () => {
             <br/>
             
             <div className = "mainFrame">
-            <Stage width={window.innerWidth} height={window.innerHeight}>
+            <Stage width={windowWidth} height={windowHeight}>
                 <Layer>
                     <Arc
                         innerRadius = {1}
