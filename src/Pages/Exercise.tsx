@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Clock from '../Comps/Clock'
 import { Stage, Layer, Arc, Label, Text } from 'react-konva';
+import { Box } from '@mui/system';
 
 const Exercise = () => {
 
@@ -33,6 +34,7 @@ const Exercise = () => {
             
             <br/>
             
+            <div className = "mainFrame">
             <Stage width={window.innerWidth} height={window.innerHeight}>
                 <Layer>
                     <Arc
@@ -58,7 +60,7 @@ const Exercise = () => {
                     />
                 </Layer>
             </Stage>
-            
+            </div>
         </div>
 )}
 

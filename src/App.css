@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color:#333333;
+  color :chartreuse
 }
 
 .App-logo {
@@ -26,6 +28,19 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.mainFrame {
+  background-color :#6e6e77
+}
+
+.home {
+  height: 100%;
+}
+
+.clock-text {
+  background-color:#181515;
+  color :rgb(223, 226, 219);
 }
 
 @keyframes App-logo-spin {
