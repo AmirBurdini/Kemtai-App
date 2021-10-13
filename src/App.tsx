@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+import {Arc} from 'react-konva'
+
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 import Exercise from './Pages/Exercise';
