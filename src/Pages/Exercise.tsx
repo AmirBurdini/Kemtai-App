@@ -3,17 +3,16 @@ import React, { useRef, useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Clock from '../Comps/Clock'
 import { Stage, Layer, Arc, Label, Text } from 'react-konva';
-import { Typography } from '@mui/material';
 
 const Exercise = () => {
 
-    const [position, setPosition] = useState({x : -350, y : -150})
+    const [position, setPosition] = useState({x : -400, y : -20})
     const [angle, setAngle] = useState(Math.random() * (150) + 30)
 
     let randomLocation = () => {
 
-        let y : number = Math.random() * (-100) - 100 ;
-        let x : number = Math.random() * (-100) - 100 ;
+        let y : number = Math.random() * (-100) - 400 ;
+        let x : number = Math.random() * (-100) - 20 ;
         let angle : number = Math.random() * (150) + 30;
 
         setPosition({x, y})
@@ -27,11 +26,13 @@ const Exercise = () => {
 
     return (
         <div className = "Exercise">
-             <Stack direction="row" spacing={30}>
+             <Stack direction="row" spacing={window.innerWidth * 0.08}>
                 {exerciseTimer}
                 {totalTimer}
             </Stack>
+            
             <br/>
+            
             <Stage width={window.innerWidth} height={window.innerHeight}>
                 <Layer>
                     <Arc
@@ -57,6 +58,7 @@ const Exercise = () => {
                     />
                 </Layer>
             </Stage>
+            
         </div>
 )}
 
