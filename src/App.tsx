@@ -7,7 +7,6 @@ import Exercise from './Pages/Exercise';
 import Home from './Pages/Home';
 import Tnx from './Pages/Tnx';
 
-
 function App() {
   return (
     <div className="App">
