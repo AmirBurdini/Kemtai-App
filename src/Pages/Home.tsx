@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {Redirect} from "react-router-dom"
 
 import {Button} from '@material-ui/core'
-import Clock from '../Comps/Clock';
 
 const Home = () => {
 
