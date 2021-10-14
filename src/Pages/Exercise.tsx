@@ -10,8 +10,8 @@ const Exercise = () => {
     const windowHeight : number = window.innerHeight
 
     const [position, setPosition] = useState({
-        x : Math.random() * windowWidth * (-0.3)
-        , y : Math.random() * windowHeight * (-0.3)
+        x : Math.random() * windowWidth * (-0.5)
+        , y : Math.random() * windowHeight * (-0.5)
     })
     const [angle, setAngle] = useState(Math.random() * (150) + 30)
     
@@ -31,10 +31,10 @@ const Exercise = () => {
         randomPoints = {randomLocation}/>
 
     return (
-        <div className = "Exercise">
-            <Stack direction="row" spacing="75%">
-                {exerciseTimer}
-                {totalTimer}
+        <div className = "exercise">
+            <Stack direction="row" >
+                <div className = "left-clock">{exerciseTimer}</div>
+                <div className = "right-clock">{totalTimer}</div>
             </Stack>
             
             <br/>

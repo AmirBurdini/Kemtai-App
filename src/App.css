@@ -47,6 +47,12 @@
   font-size: 20;
 }
 
+.left-clock {
+  padding-left: 5;
+  
+  margin-right:auto ;
+}
+
 
 @keyframes App-logo-spin {
   from {

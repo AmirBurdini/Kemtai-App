@@ -4,9 +4,12 @@ import {Typography} from '@material-ui/core';
 
 const ThankYouPage = () => {
 
+    const windowWidth : number = window.innerWidth
+    const windowHeight : number = window.innerHeight
+
     let customStyle = {
-        height : 300,
-        padding : 300,
+        height :  windowHeight * 0.5,
+        padding : windowWidth * 0.2,
     }
 
     return (
