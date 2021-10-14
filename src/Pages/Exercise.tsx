@@ -16,7 +16,7 @@ const Exercise = () => {
     const [angle, setAngle] = useState(Math.random() * (150) + 30)
 
 
-    let randomLocation = () => {
+    const randomLocation = () => {
 
         let y : number = Math.random() * windowHeight * (-0.6);
         let x : number = Math.random() * windowWidth * (-0.6) ;
@@ -26,9 +26,9 @@ const Exercise = () => {
         setAngle(angle)
     }
 
-    let exerciseTimer = <Clock id = "exerciseTimer" seconds = {5} transition = {false} 
+    const exerciseTimer = <Clock id = "exerciseTimer" seconds = {5} transition = {false} 
         randomPoints = {randomLocation}/>
-    let totalTimer = <Clock id = "totalTimer" seconds = {60} transition = {true} 
+    const totalTimer = <Clock id = "totalTimer" seconds = {60} transition = {true} 
         randomPoints = {randomLocation}/>
 
     return (

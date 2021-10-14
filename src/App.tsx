@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Exercise from './Pages/Exercise';
 import Home from './Pages/Home';
-import Tnx from './Pages/Tnx';
+import ThankYouPage from './Pages/ThankYouPage';
 
 const {BrowserRouter :Router, Switch, Route} = require('react-router-dom')
 
@@ -20,7 +20,7 @@ function App() {
                 <Exercise />
             </Route>
             <Route path = "/tnx">
-                <Tnx />
+                <ThankYouPage />
             </Route>
             <Route path = "/">
                 <Home />
