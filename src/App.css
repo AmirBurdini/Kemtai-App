@@ -39,10 +39,13 @@
 }
 
 .clock-text {
-  background-color:#181515;
-  color :rgb(223, 226, 219);
+  background-color:#000000;
+  color :rgb(255, 255, 255);
+  border-radius : 8px;
+  padding-left : 8px;
+  padding-right : 8px;
+  font-size: 20;
 }
-
 
 @keyframes App-logo-spin {
   from {
