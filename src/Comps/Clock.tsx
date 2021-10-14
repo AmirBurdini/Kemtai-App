@@ -62,7 +62,7 @@ const Clock : React.FC<Props> = (props) : JSX.Element => {
           strokeWidth : 40
           
           // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-        }}
+    }}
 
     return (
         <div className = "clock">

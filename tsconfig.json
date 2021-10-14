@@ -19,7 +19,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "noImplicitAny": false
+    "noImplicitAny": true
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "error"
   },
   "include": [
     "src"

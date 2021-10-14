@@ -8,9 +8,6 @@ const {BrowserRouter :Router, Switch, Route} = require('react-router-dom')
 
 function App() {
 
-  const windoWidth : number = window.innerWidth
-  const windowHeight : number = window.innerHeight
-
   return (
     <div className="App">
       
