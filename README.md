@@ -1,6 +1,6 @@
 # Kemtai-App
 
-this app was made as a trial for Yoga App - Kemtai
+this app was made as a trial for Kemtai
 
 # Tools and Tech Stack
 
@@ -9,3 +9,4 @@ this project was built using ReactJs and Typescript, also featuring various libr
 # Host
 
 the client is hosted by salesforce's Heroku Cloud
+
