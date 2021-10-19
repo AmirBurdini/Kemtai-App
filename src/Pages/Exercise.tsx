@@ -10,19 +10,26 @@ const Exercise = () => {
     const windowHeight : number = window.innerHeight
 
     const [position, setPosition] = useState({
-        x : Math.random() * windowWidth * (-0.5)
-        , y : Math.random() * windowHeight * (-0.5)
+        x : Math.random() * windowWidth * (0.5) + 100
+        , y : Math.random() * windowHeight * (0.5) + 100
     })
     const [angle, setAngle] = useState(Math.random() * (150) + 30)
-    
+    const [rotation, setRotation] = useState(Math.random() * (90))
+
     const randomLocation = () => {
 
-        let y : number = Math.random() * windowHeight * (-0.5);
-        let x : number = Math.random() * windowWidth * (-0.5);
+        let y : number = Math.random() * windowHeight * (0.5) + 100;
+        let x : number = Math.random() * windowWidth * (0.5) + 100;
         let angle : number = Math.random() * (150) + 30;
-
+        let rotation : number = Math.random() * (90);
+        
         setPosition({x, y})
         setAngle(angle)
+        setRotation(rotation)
+    
+        console.log(position);
+        console.log(angle);
+        console.log(rotation);
     }
 
     const exerciseTimer = <Clock id = "exerciseTimer" seconds = {5} transition = {false} 
@@ -44,23 +51,26 @@ const Exercise = () => {
                 <Layer>
                     <Arc
                         innerRadius = {1}
-                        outerRadius = {200}
+                        outerRadius = {60}
                         stroke = '#000000'
                         angle = {angle}
-                        offsetX = {position.x}
-                        offsetY = {position.y}
+                        x = {position.x}
+                        y = {position.y}
+                        rotation = {rotation}
+                        
                     />
                     <Arc
                         innerRadius = {1}
-                        outerRadius = {100}
+                        outerRadius = {30}
                         fill = '#b80000'
                         angle = {angle}
-                        offsetX = {position.x}
-                        offsetY = {position.y}
+                        x = {position.x}
+                        y = {position.y}
+                        rotation = {rotation}
                     />
                     <Text
-                        offsetX = {position.x}
-                        offsetY = {position.y + 15}
+                         x = {position.x}
+                         y = {position.y - 15}
                         text = {angle.toFixed(2) + ""}
                     />
                 </Layer>
