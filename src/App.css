@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color:#333333;
-  color :chartreuse
+  color :chartreuse;
 }
 
 .App-logo {
@@ -31,7 +31,8 @@
 }
 
 .mainFrame {
-  background-color :#6e6e77
+  background-color :#6e6e77;
+  color :chartreuse;
 }
 
 .home {
@@ -44,11 +45,19 @@
   border-radius : 8px;
   padding-left : 8px;
   padding-right : 8px;
-  font-size: 20;
 }
 
 .left-clock {  
   margin-right:auto ;
+  margin-left:5% ;
+}
+
+.right-clock {
+  margin-right:5%
+}
+
+.clock {
+  margin-top: 20%;
 }
 
 

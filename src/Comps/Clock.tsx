@@ -64,13 +64,19 @@ const Clock : React.FC<Props> = (props) : JSX.Element => {
           // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
     }}
 
+    const textLoction = {
+
+        marginTop : 10,
+        fontSize : 20,
+    }
+
     return (
         <div className = "clock">
             <Stack direction="row" spacing={5}>
                 <div>
-                <Typography className = "clock-text">{time}</Typography>
+                <Typography className = "clock-text" style = {textLoction}>{time}</Typography>
                 </div>
-                <div style={{ width: 40, height: 40 }}>
+                <div style={{ width: 50, height: 50 }}>
                     <CircularProgressbar
                         value={time}
                         minValue = {0}

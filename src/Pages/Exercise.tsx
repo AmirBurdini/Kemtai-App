@@ -50,8 +50,8 @@ const Exercise = () => {
             <Stage width={windowWidth} height={windowHeight}>
                 <Layer>
                     <Arc
-                        innerRadius = {1}
-                        outerRadius = {60}
+                        innerRadius = {0}
+                        outerRadius = {120}
                         stroke = '#000000'
                         angle = {angle}
                         x = {position.x}
@@ -60,8 +60,8 @@ const Exercise = () => {
                         
                     />
                     <Arc
-                        innerRadius = {1}
-                        outerRadius = {30}
+                        innerRadius = {0}
+                        outerRadius = {50}
                         fill = '#b80000'
                         angle = {angle}
                         x = {position.x}
@@ -69,9 +69,11 @@ const Exercise = () => {
                         rotation = {rotation}
                     />
                     <Text
-                         x = {position.x}
-                         y = {position.y - 15}
-                        text = {angle.toFixed(2) + ""}
+                        fontSize = {30}
+                        fontFamily = 'Calibri'
+                        x = {position.x}
+                        y = {position.y - 30}
+                        text = {angle.toFixed(2) + "°"}
                     />
                 </Layer>
             </Stage>
